@@ -1,4 +1,5 @@
 ﻿using C3Git.Cli.Commands;
+using C3Git.Cli.Extensions;
 using LibGit2Sharp;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ namespace C3Git.Cli.CommandHandlers
             var targetDirectory = init.TargetDirectory.Ensure();
 
             Console.WriteLine("Extracting project files...");
-            ZipFile.ExtractToDirectory(sourceFile.FullName, targetDirectory.FullName);
+            sourceFile.UnZip(targetDirectory);
             Console.WriteLine("Project files extracted.");
 
             Console.WriteLine("Initializing git...");

@@ -28,7 +28,7 @@ namespace C3Git.Cli.CommandHandlers
             Console.WriteLine("Outdated files deleted.");
 
             Console.WriteLine("Pulling files from the project...");
-            ZipFile.ExtractToDirectory(sourceProject.FullName, targetDirectory.FullName);
+            sourceProject.UnZip(targetDirectory);
             Console.WriteLine("Project mounted.");
 
             Console.WriteLine("Commiting changes...");
