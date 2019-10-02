@@ -29,7 +29,7 @@ namespace C3Git.Cli.CommandHandlers
 
             Console.WriteLine("Pulling files from the project...");
             sourceProject.UnZip(targetDirectory);
-            Console.WriteLine("Project mounted.");
+            Console.WriteLine("Project extracted.");
 
             Console.WriteLine("Commiting changes...");
             using(var repo = new Repository(targetDirectory.FullName))
