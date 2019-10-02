@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "C3Git.Cli": {
+      "commandName": "Project",
+      "commandLineArgs": "mount",
+      "workingDirectory": "E:\\git-c3\\8-direction-example"
+    }
+  }
+}
